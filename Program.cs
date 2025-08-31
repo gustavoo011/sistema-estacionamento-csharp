@@ -47,16 +47,26 @@ while (!encerrar)
     case 2: //Listar Veículos
       Console.Clear();
       Console.WriteLine("Listar Veículos");
-      Console.WriteLine($"\nVeículos Estacionados: {Veiculos.Count}");
-      Console.WriteLine("Lista de Veículos");
-      foreach (string veiculo in Veiculos)
+      Console.WriteLine($"Veículos Estacionados: {Veiculos.Count}");
+      if (Veiculos.Any()) //Verificando se há algum elemento na lista 'Veiculos'
       {
-        Console.WriteLine(veiculo);
+        Console.WriteLine("\nLista de Veículos");
+        foreach (string veiculo in Veiculos)
+        {
+          Console.WriteLine(veiculo);
+        }
       }
+      else
+      {
+        Console.WriteLine("\nNão há veículos estacionados.");
+      }
+      
       Console.Write("\nPressione qualquer tecla para continuar...");
       Console.ReadKey();
       break;
-    case 3:
+    case 3: //Remover Veículo
+      Console.Clear();
+      Console.WriteLine();
       break;
     case 4: //Encerrar
       Console.WriteLine("Encerrando...");
