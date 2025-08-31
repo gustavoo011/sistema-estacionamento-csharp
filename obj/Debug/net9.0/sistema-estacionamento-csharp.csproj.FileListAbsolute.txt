@@ -1,0 +1,15 @@
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\bin\Debug\net9.0\sistema-estacionamento-csharp.exe
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\bin\Debug\net9.0\sistema-estacionamento-csharp.deps.json
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\bin\Debug\net9.0\sistema-estacionamento-csharp.runtimeconfig.json
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\bin\Debug\net9.0\sistema-estacionamento-csharp.dll
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\bin\Debug\net9.0\sistema-estacionamento-csharp.pdb
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.AssemblyInfoInputs.cache
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.AssemblyInfo.cs
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.csproj.CoreCompileInputs.cache
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.sourcelink.json
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.dll
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\refint\sistema-estacionamento-csharp.dll
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.pdb
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\sistema-estacionamento-csharp.genruntimeconfig.cache
+C:\Users\gutoo\OneDrive\Documentos\GitHub\sistema-estacionamento-csharp\obj\Debug\net9.0\ref\sistema-estacionamento-csharp.dll
