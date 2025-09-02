@@ -35,5 +35,70 @@ namespace Estacionamento.Models
             Console.Write("Pressione qualquer tecla para continuar...");
             Console.ReadKey();
         }
+
+        public void ListarVeiculos()
+        {
+            Console.Clear();
+            Console.WriteLine("Listar Veículos");
+            Console.WriteLine($"Veículos Estacionados: {Veiculos.Count}");
+            if (Veiculos.Any()) //Verificando se há algum elemento na lista 'Veiculos'
+            {
+                Console.WriteLine("\nLista de Veículos");
+                foreach (string veiculo in Veiculos)
+                {
+                    Console.WriteLine(veiculo);
+                }
+            }
+            else
+            {
+                Console.WriteLine("\nNão há veículos estacionados.");
+            }
+
+            Console.Write("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
+        }
+
+        public void RemoverVeiculo()
+        {
+            int horas;
+            Console.Clear();
+            Console.WriteLine("Remover Veículo");
+            Console.Write("\nDigite a placa do veículo que será removido: ");
+            placa = Console.ReadLine();
+            while (string.IsNullOrWhiteSpace(placa) || placa.Length != 7)
+            {
+                Console.WriteLine("\nEntrada Inválida. Digite novamente");
+                Console.Write("Digite a placa do veículo que será removido: ");
+                placa = Console.ReadLine();
+            }
+            if (Veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
+            {
+                Console.Write("Digite a quantidade de horas estacionadas: ");
+                while (!int.TryParse(Console.ReadLine(), out horas))
+                {
+                Console.WriteLine("\nEntrada Inválida. Digite novamente");
+                Console.Write("Digite a quantidade de horas estacionadas: ");
+                }
+                Console.Clear();
+                Console.WriteLine($"Veículo: {placa}");
+                Console.WriteLine($"\nPreço Inicial: R${precoInicial}");
+                Console.WriteLine($"Preço por Hora: R${precoHora}");
+                Console.WriteLine($"Horas estacionadas: {horas}");
+                Console.WriteLine($"Preço total a pagar: R${(precoHora * horas) + precoInicial}");
+                Console.Write("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey();
+                Veiculos.Remove(placa);
+                Console.Clear();
+                Console.WriteLine($"Veículo de placa {placa} removido com sucesso.");
+                Console.Write("\nPressione qualquer tecla para continuar...");
+                Console.ReadKey();
+            }
+            else
+            {
+                Console.WriteLine("\nNão existem veículos para serem removidos.");
+            }
+        
+        }
+
     }
 }

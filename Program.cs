@@ -3,9 +3,8 @@
 
 //Declaração de Variáveis
 bool encerrar = false;
-int opcao, horas;
+int opcao;
 decimal precoInicial, precoHora;
-string placa;
 
 //Lista para armazenar os Veículos
 List<string> Veiculos = new List<string>();
@@ -26,7 +25,7 @@ while (!decimal.TryParse(Console.ReadLine(), out precoHora)) //consistência de 
   Console.Write("Digite o preço que será cobrado por hora: R$");
 }
 
- 
+Estacionamento.Models.Estacionamento es = new Estacionamento.Models.Estacionamento(precoInicial, precoHora);
 
 //Loop para o Menu
 while (!encerrar)
@@ -36,7 +35,7 @@ while (!encerrar)
   Console.WriteLine("Seja bem-vindo(a) ao Sistema de Estacionamento!");
   Console.WriteLine($"Preço Inicial: R${precoInicial}");
   Console.WriteLine($"Preço por Hora: R${precoHora}");
-  Console.WriteLine($"Veículos estacionados: {Veiculos.Count}");
+
   Console.WriteLine("\nMenu");
   Console.WriteLine("1. Adicionar Veículo");
   Console.WriteLine("2. Listar Veículos");
@@ -53,65 +52,13 @@ while (!encerrar)
   switch (opcao)
   {
     case 1: //Adicionar Veículo
-
+      es.AdicionarVeiculo();
+      break;
     case 2: //Listar Veículos
-      Console.Clear();
-      Console.WriteLine("Listar Veículos");
-      Console.WriteLine($"Veículos Estacionados: {Veiculos.Count}");
-      if (Veiculos.Any()) //Verificando se há algum elemento na lista 'Veiculos'
-      {
-        Console.WriteLine("\nLista de Veículos");
-        foreach (string veiculo in Veiculos)
-        {
-          Console.WriteLine(veiculo);
-        }
-      }
-      else
-      {
-        Console.WriteLine("\nNão há veículos estacionados.");
-      }
-
-      Console.Write("\nPressione qualquer tecla para continuar...");
-      Console.ReadKey();
+      es.ListarVeiculos();
       break;
     case 3: //Remover Veículo
-      Console.Clear();
-      Console.WriteLine("Remover Veículo");
-      Console.Write("\nDigite a placa do veículo que será removido: ");
-      placa = Console.ReadLine();
-      while (string.IsNullOrWhiteSpace(placa) || placa.Length != 7)
-      {
-        Console.WriteLine("\nEntrada Inválida. Digite novamente");
-        Console.Write("Digite a placa do veículo que será removido: ");
-        placa = Console.ReadLine();
-      }
-      if (Veiculos.Any(x => x.ToUpper() == placa.ToUpper()))
-      {
-        Console.Write("Digite a quantidade de horas estacionadas: ");
-        while (!int.TryParse(Console.ReadLine(), out horas))
-        {
-          Console.WriteLine("\nEntrada Inválida. Digite novamente");
-          Console.Write("Digite a quantidade de horas estacionadas: ");
-        }
-        Console.Clear();
-        Console.WriteLine($"Veículo: {placa}");
-        Console.WriteLine($"\nPreço Inicial: R${precoInicial}");
-        Console.WriteLine($"Preço por Hora: R${precoHora}");
-        Console.WriteLine($"Horas estacionadas: {horas}");
-        Console.WriteLine($"Preço total a pagar: R${(precoHora * horas) + precoInicial}");
-        Console.Write("\nPressione qualquer tecla para continuar...");
-        Console.ReadKey();
-        Veiculos.Remove(placa);
-        Console.Clear();
-        Console.WriteLine($"Veículo de placa {placa} removido com sucesso.");
-        Console.Write("\nPressione qualquer tecla para continuar...");
-        Console.ReadKey();
-      }
-      else
-      {
-        Console.WriteLine("\nNão existem veículos para serem removidos.");
-      }
-
+      es.RemoverVeiculo();
       break;
     case 4: //Encerrar
       Console.WriteLine("Encerrando...");
