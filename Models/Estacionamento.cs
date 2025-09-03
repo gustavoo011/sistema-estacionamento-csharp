@@ -76,8 +76,8 @@ namespace Estacionamento.Models
                 Console.Write("Digite a quantidade de horas estacionadas: ");
                 while (!int.TryParse(Console.ReadLine(), out horas))
                 {
-                Console.WriteLine("\nEntrada Inválida. Digite novamente");
-                Console.Write("Digite a quantidade de horas estacionadas: ");
+                    Console.WriteLine("\nEntrada Inválida. Digite novamente");
+                    Console.Write("Digite a quantidade de horas estacionadas: ");
                 }
                 Console.Clear();
                 Console.WriteLine($"Veículo: {placa}");
@@ -90,15 +90,23 @@ namespace Estacionamento.Models
                 Veiculos.Remove(placa);
                 Console.Clear();
                 Console.WriteLine($"Veículo de placa {placa} removido com sucesso.");
-                Console.Write("\nPressione qualquer tecla para continuar...");
-                Console.ReadKey();
+
+            }
+            else if (!Veiculos.Contains(placa))
+            {
+                Console.WriteLine("\nO veículo digitado não existe.");
             }
             else
             {
                 Console.WriteLine("\nNão existem veículos para serem removidos.");
             }
+            Console.Write("\nPressione qualquer tecla para continuar...");
+            Console.ReadKey();
         
         }
-
+        public int QuantidadeVeiculos
+        {
+            get {return Veiculos.Count;}
+        }
     }
 }

@@ -35,7 +35,7 @@ while (!encerrar)
   Console.WriteLine("Seja bem-vindo(a) ao Sistema de Estacionamento!");
   Console.WriteLine($"Preço Inicial: R${precoInicial}");
   Console.WriteLine($"Preço por Hora: R${precoHora}");
-
+  Console.WriteLine($"Veículos estacionados: {es.QuantidadeVeiculos}");
   Console.WriteLine("\nMenu");
   Console.WriteLine("1. Adicionar Veículo");
   Console.WriteLine("2. Listar Veículos");
